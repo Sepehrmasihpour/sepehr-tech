@@ -1,7 +1,3 @@
-Here’s how a **fiat-to-crypto on-ramp widget** (e.g. Transak, MoonPay, Onramper) works, and a bird’s-eye view of your full pipeline both **outbound** (Iran → foreign USD) and **inbound** (foreign USD → Iran):
-
----
-
 ## A. What a Fiat-to-Crypto Widget Is and How It Works
 
 1. **Embedded or Hosted UI**
