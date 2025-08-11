@@ -8,7 +8,7 @@ load_dotenv()
 class Settings(BaseSettings):
     payping_base_url: str = Field(..., env="PAYPING_BASE_URL")
     payping_access_token: str = Field(..., env="PAYPING_ACCESS_TOKEN")
-    nobitex_api_key: str = Field(..., env="NOBITEX_API_KEY")
+    nobitex_auth_token: str = Field(..., env="NOBITEX_AUTH_TOKEN")
     nobitex_base_url: str = Field(..., env="NOBITEX_BASE_URL")
     nobitex_sheba: str = Field(..., env="NOBITEX_SHEBA")
     rpc_url: str = Field(..., env="RPC_URL")

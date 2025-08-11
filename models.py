@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, HttpUrl
-from typing import Union, Optional, List
+from typing import Union, Optional, List, Literal
 
 
 class createPaymentReq(BaseModel):
@@ -70,3 +70,25 @@ class ReversePaymentResponse(BaseModel):
 
     class Config:
         allow_population_by_field_name = True
+
+
+# * models for nobitext client
+
+
+class nobitextBalanceReq(BaseModel):
+    currency: Literal["ltc", "btc", "eth", "usdt", "tron"]
+
+
+class pagination(BaseModel):
+    page: Optional[int] = None
+    page_size: Optional[int] = Field(None, alias="pageSize")
+
+
+class nobitextTransactionsReq(pagination):
+    wallet_id: int = Field(alias="wallet")
+
+
+class nobitextDepositsReq(BaseModel): ...
+
+
+class nobitextDepositsResponse(BaseModel): ...
