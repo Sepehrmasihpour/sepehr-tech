@@ -92,3 +92,11 @@ class nobitextDepositsReq(BaseModel): ...
 
 
 class nobitextDepositsResponse(BaseModel): ...
+
+
+# * models for arc
+
+
+class GetAccountBalanceResponse(BaseModel):
+    availableBalance: float
+    actualBalance: float
